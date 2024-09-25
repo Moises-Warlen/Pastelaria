@@ -32,11 +32,9 @@ public class EmailService
             // Tenta enviar o e-mail
             cliente.Send(mensagem);
         }
-        catch (Exception ex)
+        catch (Exception)
         {
-            // Trata exceções que possam ocorrer durante o envio do e-mail
-            // Aqui você pode registrar a exceção ou notificar o usuário sobre o erro
-            throw new InvalidOperationException("Não foi possível enviar o e-mail.", ex);
+            // Captura a exceção, mas não faz nada. O programa continua sem interrupção.
         }
     }
 }
